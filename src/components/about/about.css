@@ -1,3 +1,11 @@
-#experience h6 {
+.company {
     font-weight: bold;
+}
+
+.date-range {
+    float: right;
+}
+
+.job-title {
+    font-style: italic;
 }

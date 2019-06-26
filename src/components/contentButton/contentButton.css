@@ -1,0 +1,11 @@
+.button-div {
+    display: flex;
+    justify-content: center;
+}
+
+.fa-w-14.content-chevron {
+    height: 2em;
+    width: 2em;
+    bottom: 0px;
+    position: absolute;
+}
