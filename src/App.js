@@ -1,16 +1,21 @@
 import React from 'react';
 import Header from './components/header/header';
 import About from './components/about/about';
-import ContactButton from './components/contentButton/contentButton';
+import ContentButton from './components/contentButton/contentButton';
+import Profile from './components/profile/profile';
+import Footer from './components/footer/footer';
 import './App.css';
 
 function App() {
   return (
-    <div id='wrapper'>
+    <div>
       <Header />
-      <ContactButton />
-      <div id='image-placeholder'></div>
-      <About />
+      <ContentButton />
+      <div id='wrapper'>
+        <Profile />
+        <About />
+      </div>
+      <Footer />
     </div>
   );
 }

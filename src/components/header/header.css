@@ -1,5 +1,6 @@
 .navbar {
     height: 5rem;
+    background-color: #EAE7DC;
 }
 
 .navbar-nav li:not(:first-child) {

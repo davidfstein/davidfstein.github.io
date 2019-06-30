@@ -8,4 +8,9 @@
     width: 2em;
     bottom: 0px;
     position: absolute;
+    z-index: 2;
+}
+
+.fa-w-14.content-chevron:hover {
+    cursor: pointer;
 }
