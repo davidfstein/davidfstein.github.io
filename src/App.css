@@ -2,6 +2,7 @@
     flex: 1 0 auto;
     z-index:1;
     margin-bottom:200px;
+    padding-bottom: 50px;
     position: relative;
     background-color: #EAE7DC; 
 }
