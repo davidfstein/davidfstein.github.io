@@ -9,6 +9,8 @@
     bottom: 0px;
     position: absolute;
     z-index: 2;
+    opacity: 1;
+    transition: opacity 2s;
 }
 
 .fa-w-14.content-chevron:hover {
