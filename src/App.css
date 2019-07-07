@@ -1,7 +1,7 @@
 #wrapper {
     flex: 1 0 auto;
     z-index:1;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     padding-bottom: 50px;
     position: relative;
     background-color: #EAE7DC; 
@@ -9,4 +9,8 @@
 
 #image-placeholder {
     height: 100vh;
+}
+
+.container {
+    margin-top: 5rem;
 }

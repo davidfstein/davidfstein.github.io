@@ -1,6 +1,11 @@
-.navbar {
+html .navbar {
     height: 5rem;
     background-color: #EAE7DC;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    margin-bottom: 5rem;
+    transition: 1s background-color;
 }
 
 .navbar-nav li:not(:first-child) {
@@ -30,4 +35,8 @@
     font-size: x-small;
     color: black;
     text-transform: uppercase;
+}
+
+html .navbar-scroll {
+    
 }
