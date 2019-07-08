@@ -5,6 +5,7 @@
     padding-bottom: 50px;
     position: relative;
     background-color: #EAE7DC; 
+    margin-top: 5rem;
 }
 
 #image-placeholder {
@@ -12,5 +13,5 @@
 }
 
 .container {
-    margin-top: 5rem;
+    
 }

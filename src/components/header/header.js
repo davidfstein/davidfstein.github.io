@@ -27,12 +27,14 @@ class Header extends React.Component {
     removeHeaderClassAtTop = () => {
         if (this.state.atTop) {
             const header = document.querySelector('.navbar');
+            // header.style.height = '5rem';
             header.style.backgroundColor = '#EAE7DC';
         }
     }
 
     swapHeaderClass = () => {
         const header = document.querySelector('.navbar');
+        // header.style.height = '3rem';
         header.style.backgroundColor = '#D8C3A5';
     }
 
@@ -59,38 +61,20 @@ class Header extends React.Component {
     render() {
         return (
             <Navbar>
-                {   
-                    this.state.atTop
-                    ? 
-                    <Nav navbar className='flex-row'>
-                        <NavItem>
-                            <NavLink href="/resume#about">About Me</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="/resume#experience">Experience</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="/resume">Skills</NavLink>
-                        </NavItem>
-                    </Nav>
-                    :
-                    <div>
-                        <NavbarToggler onClick={this.toggleNavbar} className="mr-2 navbar-dark" />
-                        <Collapse isOpen={!this.state.collapsed} navbar>
-                            <Nav navbar className='flex-row'>
-                                <NavItem>
-                                    <NavLink href="/resume#about">About Me</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink href="/resume#experience">Experience</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink href="/resume">Skills</NavLink>
-                                </NavItem>
-                            </Nav>
-                        </Collapse>
-                    </div>
-                }
+                <Nav navbar className='flex-row'>
+                    <NavItem>
+                        <NavLink href="/resume#about">About Me</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="/resume#experience">Experience</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="/resume">Skills</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="/blog">Blog</NavLink>
+                    </NavItem>
+                </Nav>
                 <NavbarBrand href="/resume" className="ml-auto">David Stein</NavbarBrand>
             </Navbar>
         );
