@@ -37,6 +37,10 @@ html .navbar {
     text-transform: uppercase;
 }
 
-html .navbar-scroll {
-    
+html .navbar-toggler {
+    border: 1px solid #8e8d8a;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    /* background-image: url("data:image/svg+xml;.."); */
 }
