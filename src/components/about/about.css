@@ -9,3 +9,7 @@
 .job-title {
     font-style: italic;
 }
+
+.body-content .col:first-child {
+    padding-top: 5rem;
+}
