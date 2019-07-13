@@ -1,4 +1,5 @@
 import React from 'react';
+import { onMobile } from '../../utils/mobile-utils';
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarToggler, Collapse } from 'reactstrap';
 import './header.css';
 
@@ -8,8 +9,14 @@ class Header extends React.Component {
         super(props);
         this.state = {
             collapsed: true,
-            atTop: true
+            atTop: true,
         };
+    }
+
+    toggleNavbar = () => {
+        this.setState({
+          collapsed: !this.state.collapsed
+        });
     }
 
     atTop = () => {
@@ -18,23 +25,15 @@ class Header extends React.Component {
         });
     }
 
-    toggleNavbar = () => {
-        this.setState({
-            collapsed: !this.state.collapsed
-        });
-    }
-
     removeHeaderClassAtTop = () => {
         if (this.state.atTop) {
             const header = document.querySelector('.navbar');
-            // header.style.height = '5rem';
             header.style.backgroundColor = '#EAE7DC';
         }
     }
 
     swapHeaderClass = () => {
         const header = document.querySelector('.navbar');
-        // header.style.height = '3rem';
         header.style.backgroundColor = '#D8C3A5';
     }
 
@@ -59,24 +58,49 @@ class Header extends React.Component {
     }
 
     render() {
+        const el = onMobile() 
+                    ? 
+                    <Navbar>
+                        <NavbarBrand href="/" className="mr-auto">David Stein</NavbarBrand>
+                        <NavbarToggler onClick={this.toggleNavbar} className='navbar-light'/>
+                        <Collapse isOpen={!this.state.collapsed} navbar>
+                            <Nav navbar className='mobile-header'>
+                                <NavItem>
+                                    <NavLink href="/#experience">Experience</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="/#education">Education</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="/#skills">Skills</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="/blog">Blog</NavLink>
+                                </NavItem>
+                            </Nav>
+                        </Collapse>
+                    </Navbar>
+                    : 
+                    <Navbar>
+                        <Nav navbar className='header flex-row'>
+                            <NavItem>
+                                <NavLink href="/#experience">Experience</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/#education">Education</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/#skills">Skills</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/blog">Blog</NavLink>
+                            </NavItem>
+                        </Nav>
+                        <NavbarBrand href="/" className="ml-auto">David Stein</NavbarBrand>
+                    </Navbar>
+                    ;
         return (
-            <Navbar>
-                <Nav navbar className='flex-row'>
-                    <NavItem>
-                        <NavLink href="/#experience">Experience</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/#education">Education</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/#skills">Skills</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/blog">Blog</NavLink>
-                    </NavItem>
-                </Nav>
-                <NavbarBrand href="/" className="ml-auto">David Stein</NavbarBrand>
-            </Navbar>
+            el
         );
     }
 }

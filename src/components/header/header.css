@@ -8,21 +8,26 @@ html .navbar {
     transition: 1s background-color;
 }
 
-.navbar-nav li:not(:first-child) {
+.header li:not(:first-child) {
     border-top: 1px solid rgba(142,141,138, .1);
     border-bottom: 1px solid rgba(142,141,138, .1);
     border-right: 1px solid rgba(142,141,138, .1);
 }
 
-.navbar-nav li:first-child {
+.header li:first-child {
     border: 1px solid rgba(142,141,138, .1);
 }
 
-.navbar li {
+.header li {
     padding-left: 7.5px;
     padding-right: 7.5px;
     width: 5rem;
     text-align: center;
+}
+
+.mobile-header {
+    float: right;
+    text-align: right;
 }
 
 .navbar a {
