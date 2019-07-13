@@ -58,7 +58,7 @@ class Header extends React.Component {
     }
 
     render() {
-        const el = onMobile() 
+        const el = true //onMobile() 
                     ? 
                     <Navbar>
                         <NavbarBrand href="/" className="mr-auto">David Stein</NavbarBrand>
@@ -66,16 +66,16 @@ class Header extends React.Component {
                         <Collapse isOpen={!this.state.collapsed} navbar>
                             <Nav navbar className='mobile-header'>
                                 <NavItem>
-                                    <NavLink href="/#experience">Experience</NavLink>
+                                    <NavLink onClick={this.toggleNavbar} href="/#experience">Experience</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="/#education">Education</NavLink>
+                                    <NavLink onClick={this.toggleNavbar} href="/#education">Education</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="/#skills">Skills</NavLink>
+                                    <NavLink onClick={this.toggleNavbar} href="/#skills">Skills</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="/blog">Blog</NavLink>
+                                    <NavLink onClick={this.toggleNavbar} href="/blog">Blog</NavLink>
                                 </NavItem>
                             </Nav>
                         </Collapse>
