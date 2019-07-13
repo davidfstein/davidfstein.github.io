@@ -1,11 +1,18 @@
-.profile-pic {
-    height: 400px;
-    position: absolute;
-    animation: 3s ease-out 0s 1 emerge;
+#above-the-fold {
+    height: 88vh;
+}
+
+#above-content {
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .welcome {
-    
+    height: 2.5rem;
+    font-weight: bold;
+    color: #E85A4F;
 }
 
 @keyframes emerge {

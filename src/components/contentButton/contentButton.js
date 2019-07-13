@@ -39,7 +39,7 @@ class ContentButton extends React.Component {
     }
 
     toContent = () => {
-        const about = document.querySelector('#about');
+        const about = document.querySelector('#experience');
         about.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 

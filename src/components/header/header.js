@@ -63,19 +63,16 @@ class Header extends React.Component {
             <Navbar>
                 <Nav navbar className='flex-row'>
                     <NavItem>
-                        <NavLink href="/resume#about">About Me</NavLink>
+                        <NavLink href="/#experience">Experience</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="/resume#experience">Experience</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/resume">Skills</NavLink>
+                        <NavLink href="/#skills">Skills</NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink href="/blog">Blog</NavLink>
                     </NavItem>
                 </Nav>
-                <NavbarBrand href="/resume" className="ml-auto">David Stein</NavbarBrand>
+                <NavbarBrand href="/" className="ml-auto">David Stein</NavbarBrand>
             </Navbar>
         );
     }
