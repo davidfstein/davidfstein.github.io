@@ -52,6 +52,16 @@ export default class About extends React.Component {
                         </li>
                     </ul>
                 </Col>
+                <Col id="education">
+                    <h2>Education</h2>
+                    <p><span className="company">Northeastern University,</span> Khoury College of Computer Sciences<br/>
+                    <span className="job-title">Candidate for a Bachelor of Science in Computer Science &amp; Biology</span><br/>
+                    <span className="honors">Honors:</span> G.P.A. 3.754/4.0, Dean’s List
+                    </p>
+                </Col>
+                <Col id="skills">
+                    <h2>Skills</h2>
+                </Col>
             </Container>
         )
     }
