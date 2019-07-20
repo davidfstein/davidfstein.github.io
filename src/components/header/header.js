@@ -58,7 +58,7 @@ class Header extends React.Component {
     }
 
     render() {
-        const el = true //onMobile() 
+        const el = onMobile() 
                     ? 
                     <Navbar>
                         <NavbarBrand href="/" className="mr-auto">David Stein</NavbarBrand>

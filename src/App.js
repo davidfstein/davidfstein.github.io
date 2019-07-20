@@ -1,10 +1,8 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import ReactGA from 'react-ga';
-import Header from './components/header/header';
-import About from './components/about/about';
-import ContentButton from './components/contentButton/contentButton';
-import Profile from './components/profile/profile';
-import Footer from './components/footer/footer';
+import Main from './components/main/main';
+import Blog from './components/blog/blog';
 import './App.css';
 
 function App() {
@@ -13,15 +11,10 @@ function App() {
   ReactGA.pageview(window.location.pathname + window.location.search);
 
   return (
-    <div>
-      <Header />
-      <ContentButton />
-      <div id='wrapper'>
-        <Profile />
-        <About />
-      </div>
-      <Footer />
-    </div>
+    <Router>
+      <Route path="/" exact component={Main} />
+      <Route path="/blog" component={Blog} />
+    </Router>
   );
 }
 

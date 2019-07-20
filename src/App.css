@@ -6,4 +6,5 @@
     position: relative;
     background-color: #EAE7DC; 
     margin-top: 5rem;
+    min-height: 100%;
 }
