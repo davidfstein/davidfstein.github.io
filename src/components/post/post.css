@@ -1,0 +1,16 @@
+.post-photo {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-right: 15px; 
+}
+
+.post {
+    width: 85%;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.post-container {
+    padding-top: 50px;
+}
