@@ -5,6 +5,7 @@ import Footer from '../footer/footer';
 import Search from '../search/search';
 import Post from '../post/post';
 import Spacer from '../spacer/spacer';
+import Pagination from '../pagination/pagination';
 import './blog.css';
 
 function Blog() {
@@ -16,6 +17,7 @@ function Blog() {
                     <Spacer height='100px' />
                     <Search />
                     <Post />
+                    <Pagination />
                 </Container>
             </div>
             <Footer />
