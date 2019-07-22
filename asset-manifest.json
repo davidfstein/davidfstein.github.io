@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "davidfstein.github.io/static/css/main.410dabdf.chunk.css",
-    "main.js": "davidfstein.github.io/static/js/main.26b70202.chunk.js",
-    "main.js.map": "davidfstein.github.io/static/js/main.26b70202.chunk.js.map",
+    "main.css": "davidfstein.github.io/static/css/main.19b0f667.chunk.css",
+    "main.js": "davidfstein.github.io/static/js/main.b560b261.chunk.js",
+    "main.js.map": "davidfstein.github.io/static/js/main.b560b261.chunk.js.map",
     "runtime~main.js": "davidfstein.github.io/static/js/runtime~main.31dda2d0.js",
     "runtime~main.js.map": "davidfstein.github.io/static/js/runtime~main.31dda2d0.js.map",
     "static/css/2.0624914a.chunk.css": "davidfstein.github.io/static/css/2.0624914a.chunk.css",
-    "static/js/2.bb6394d1.chunk.js": "davidfstein.github.io/static/js/2.bb6394d1.chunk.js",
-    "static/js/2.bb6394d1.chunk.js.map": "davidfstein.github.io/static/js/2.bb6394d1.chunk.js.map",
+    "static/js/2.0aca55bb.chunk.js": "davidfstein.github.io/static/js/2.0aca55bb.chunk.js",
+    "static/js/2.0aca55bb.chunk.js.map": "davidfstein.github.io/static/js/2.0aca55bb.chunk.js.map",
     "index.html": "davidfstein.github.io/index.html",
-    "precache-manifest.f5115636928f1a53c8e3a1e1f8ce01e1.js": "davidfstein.github.io/precache-manifest.f5115636928f1a53c8e3a1e1f8ce01e1.js",
+    "precache-manifest.cfd4ea0ab007be5772b2683b3729d6b8.js": "davidfstein.github.io/precache-manifest.cfd4ea0ab007be5772b2683b3729d6b8.js",
     "service-worker.js": "davidfstein.github.io/service-worker.js",
     "static/css/2.0624914a.chunk.css.map": "davidfstein.github.io/static/css/2.0624914a.chunk.css.map",
-    "static/css/main.410dabdf.chunk.css.map": "davidfstein.github.io/static/css/main.410dabdf.chunk.css.map"
+    "static/css/main.19b0f667.chunk.css.map": "davidfstein.github.io/static/css/main.19b0f667.chunk.css.map"
   }
 }
