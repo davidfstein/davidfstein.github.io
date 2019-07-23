@@ -17,7 +17,7 @@ function Blog() {
                     <Spacer height='100px' />
                     <Search />
                     <Post />
-                    <Pagination />
+                    <Pagination numLinks={5} />
                 </Container>
             </div>
             <Footer />
