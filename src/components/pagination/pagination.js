@@ -92,11 +92,18 @@ class Pagination extends React.Component {
     }
   }
 
+  goToResultPage = (resultNum) => {
+    console.log(resultNum)
+    this.setState({
+      pageStartIndex: this.state.pageStartIndex + resultNum,
+    }, this.scrollToTop);
+  }
+
   generatePaginationLinks = (num) => {
     let pag = []
     Array(num).fill().map((_, index) => {
       pag.push(<PaginationItem key={index}>
-                <PaginationLink href={this.state.pageStartIndex + index + 1}>
+                <PaginationLink onClick={() => this.goToResultPage(index)} >
                   {this.state.pageStartIndex + index + 1}
                 </PaginationLink>
               </PaginationItem>)
