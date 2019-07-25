@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "afe252911166e6ac43977796967d4dfb",
+    "revision": "8745eb79c6adb3a857f25807f10fe6d1",
     "url": "davidfstein.github.io/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "davidfstein.github.io/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "9c35933aa1f007bfb6c5",
+    "revision": "95c38306eb9a4d1c881c",
     "url": "davidfstein.github.io/static/css/main.19b0f667.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "davidfstein.github.io/static/js/2.f6ba6dd2.chunk.js"
   },
   {
-    "revision": "9c35933aa1f007bfb6c5",
-    "url": "davidfstein.github.io/static/js/main.120e9ff1.chunk.js"
+    "revision": "95c38306eb9a4d1c881c",
+    "url": "davidfstein.github.io/static/js/main.ff67cbd1.chunk.js"
   },
   {
     "revision": "75540be6312ec493f0fa",
