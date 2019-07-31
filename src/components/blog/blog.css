@@ -1,3 +1,7 @@
 #outer {
     min-height: 100%;
 }
+
+.post-container {
+    padding-top: 50px;
+}

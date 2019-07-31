@@ -5,12 +5,9 @@
     margin-right: 15px; 
 }
 
-.post {
+.short-post {
     width: 85%;
     display: inline-block;
     margin-bottom: 50px;
 }
 
-.post-container {
-    padding-top: 50px;
-}
