@@ -6,62 +6,45 @@ import Search from '../search/search';
 import Spacer from '../spacer/spacer';
 import ShortPost from '../post/shortPost/shortPost';
 import Pagination from '../pagination/pagination';
+import PostServiceClient from '../../services/post-service';
 import missing from '../../assets/fa-image.png';
 import './blog.css';
 
-const postContent = "Bacon ipsum dolor amet alcatra prosciutto boudin cow, \
-    rump jerky landjaeger burgdoggen pork chop tongue ball tip buffalo ham hock doner. \
-    Buffalo shoulder prosciutto boudin turducken ribeye, meatloaf chuck bacon andouille \
-    burgdoggen kielbasa biltong pastrami. Short loin shoulder beef ribs meatloaf \
-    pancetta, pig tail pork loin kevin t-bone. \
-    Bacon ipsum dolor amet alcatra prosciutto boudin cow, \
-    rump jerky landjaeger burgdoggen pork chop tongue ball tip buffalo ham hock doner. \
-    Buffalo shoulder prosciutto boudin turducken ribeye, meatloaf chuck bacon andouille \
-    burgdoggen kielbasa biltong pastrami. Short loin shoulder beef ribs meatloaf \
-    pancetta, pig tail pork loin kevin t-bone. \
-    Bacon ipsum dolor amet alcatra prosciutto boudin cow, \
-    rump jerky landjaeger burgdoggen pork chop tongue ball tip buffalo ham hock doner. \
-    Buffalo shoulder prosciutto boudin turducken ribeye, meatloaf chuck bacon andouille \
-    burgdoggen kielbasa biltong pastrami. Short loin shoulder beef ribs meatloaf \
-    pancetta, pig tail pork loin kevin t-bone. \
-    Bacon ipsum dolor amet alcatra prosciutto boudin cow, \
-    rump jerky landjaeger burgdoggen pork chop tongue ball tip buffalo ham hock doner. \
-    Buffalo shoulder prosciutto boudin turducken ribeye, meatloaf chuck bacon andouille \
-    burgdoggen kielbasa biltong pastrami. Short loin shoulder beef ribs meatloaf \
-    pancetta, pig tail pork loin kevin t-bone."
-
 const postImage = missing;
 
-const generatePosts = () => {
-    return Array.from(
-        Array(5).fill().map((_, index) => {
-            const post = {
-                title: 'post' + index,
-                photo: postImage,
-                content: postContent,
-            }
-            return post;
-        })
-    );
-}
-
-const renderPosts = () => {
-    const posts = generatePosts();
-    return Array.from(
-        posts.map((post, _) => {
-            const excerpt = getPostExcerpt(post.content, 100);
-            return <ShortPost excerpt={excerpt} post={post} />
-        })
-    )
-}
-
-const getPostExcerpt = (postContent, excerptLength) => {
-    const words = postContent.split(" ")
-    const excerpt = words.slice(0, excerptLength).join(' ');
-    return excerpt;
-}
-
 class Blog extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+            shortPosts: [],
+        }
+    }
+
+    componentDidMount = () => {
+        this.getPosts()
+    }
+
+    renderPosts = (posts) => {
+        return Array.from(posts.map((post, _) => {
+            const excerpt = this.getPostExcerpt(post.body, 40);
+            return <ShortPost excerpt={excerpt} post={post} image={postImage} />
+        }))
+    }
+
+    getPosts = async () => {
+        const posts = await new PostServiceClient().getPosts();
+        const shortPosts = this.renderPosts(posts);
+        this.setState({
+            shortPosts: shortPosts,
+        });
+    }
+
+    getPostExcerpt = (postContent, excerptLength) => {
+        const words = postContent.split(" ")
+        const excerpt = words.slice(0, excerptLength).join(' ');
+        return excerpt;
+    }
 
     render() {
         return (
@@ -72,7 +55,7 @@ class Blog extends React.Component {
                         <Spacer height='100px' />
                         <Search />
                         <div className='post-container'>
-                            {renderPosts()}
+                            {this.state.shortPosts}
                         </div>
                         <Pagination numLinks={5} />
                     </Container>

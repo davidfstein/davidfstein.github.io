@@ -18,7 +18,7 @@ class FullPost extends React.Component {
                             <h2 className='postTitle'>{this.props.location.state.post.title.toUpperCase()}</h2>
                             <br />
                             <p>
-                                {this.props.location.state.post.content}
+                                {this.props.location.state.post.body}
                             </p>
                         </div>
                     </Container>

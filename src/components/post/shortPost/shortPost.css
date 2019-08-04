@@ -11,3 +11,24 @@
     margin-bottom: 50px;
 }
 
+.short-post-link:hover {
+    text-decoration: none;
+}
+
+.short-post-title:hover {
+    color: #cf7670;
+}
+
+.short-post-title {
+    color: #E85A4F;
+    margin-bottom: 0px;
+}
+
+.short-post-meta-author {
+    color: #8E8D8A;
+}
+
+.short-post-meta-date {
+    color: #8E8D8A;
+    font-style: italic;
+}
